@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Flores da Praia</title>
+
+    <style>
+      h1,
+      h2,
+      h3,
+      p {
+        color: white;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid green;
+        background: green;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: white;
+        color: green;
+        border: 1px solid green;
+      }
+
+      img {
+        height: 30px;
+        width: 50px;
+      }
+
+      .beach {
+        height: 220px;
+        width: 50%;
+      }
+      section {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        background-image: linear-gradient(
+          #87ceeb,
+          lightblue,
+          rgb(138, 230, 138)
+        );
+        border: 5px solid #87ceeb;
+        border-radius: 8px;
+        max-width: 700px;
+        width: 80%;
+        /* height: 90vh; */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0; */
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1>Casa Flores da Praia</h1>
+        <hr />
+        <h2>
+          Beautiful 3 bedroom home,<strong>a stone away from the sea.</strong>
+        </h2>
+        <p>Situated in Port Edward, <strong>South Africa</strong></p>
+        <hr />
+        <h3>Description</h3>
+        <p>
+          This home is located in Port Edward, perfect for a group of friends or
+          family. The house has 3 bedrooms all en-suite and the upstairs bedroom
+          has an extra single bed. It has 4 bathrooms Large open plan kitchen
+          with all the necessities. This home is located 200m to the sea, and a
+          great spot to practice yoga and meditation. Ideal location for
+          fishing, and taking walks. The home is located next to the lighthouse
+          and there is an alarm system in the property. The area is safe too.
+        </p>
+        <h3>☀️ Beautiful and Sunny Coastal Area</h3>
+        <p>Port Edward,<strong>South Coast</strong></p>
+
+        <img src="beach.jpg" class="beach" />
+
+        <hr />
+        <p><strong> More Info </strong></p>
+        <button>BOOK NOW</button>
+        <p>Coded by Zintle Zide</p>
+      </div>
+    </section>
+
+    <script>
+      function changeCity() {
+        let city = prompt("Where are you coming from?");
+        let number = prompt("How many people do you need accomodation for?");
+        let heading = document.querySelector("h1");
+        if (number > 7) {
+          heading.innerHTML =
+            "☹️<br /> Oh no, unforunately we cannot accomodate you";
+        } else {
+          heading.innerHTML =
+            "😄<br />Yay, you may proceed to book.<br/><a href='https://www.airbnb.co.za/rooms/53650982?locale=en&_set_bev_on_new_domain=1672918008_Yzg4ODFkZDVlMzZh&source_impression_id=p3_1687005161_5nGwWdVSYyD7ZHfh'><img src='/airbnb.png' alt='AirBnB' width='10px' height='10px'></a>";
+        }
+      }
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>
